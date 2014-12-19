@@ -1,14 +1,21 @@
 class Array
 
-	# {|memo,item| memo + item}
+	# .inject {|memo,item| memo + item}
 
-	def my_inject
+	def my_inject(&block)
 		copy = self.dup
 		copy.each do |item|
-			yield memo,item   #could use &yield as argument and then block.cal here
+			block.call memo,item #could use &yield as argument and then block.cal here
 			p item
 		end
 	end
+
+# [1,2,3,4]
+# {|memo,item| memo + item}
+
+
+
+
 
 
 end
