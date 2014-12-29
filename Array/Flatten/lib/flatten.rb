@@ -1,10 +1,10 @@
 class Array
 
 	def my_flatten
-		self.map do |x|
+		self.each do |x|
 			if x.class == Array
-				x.join(', ')
-			else x
+				x.each { |y| self << y }
+				self.delete(x)
 			end
 		end
 	end
