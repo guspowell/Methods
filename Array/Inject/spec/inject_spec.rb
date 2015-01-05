@@ -26,7 +26,7 @@ describe Array do
 
 		it 'can add numbers together' do
 			expect([1,2,3,4].inject(:+)).to eq 10
-			# expect([1,2,3,4].my_inject(:+)).to eq 10
+			expect([1,2,3,4].my_inject(:+)).to eq 10
 
 		end
 
@@ -46,6 +46,7 @@ describe Array do
 
 		it 'can add with a starting point and a symbol' do
 			expect([1,2,3,4].inject(10,:+)).to eq 20
+			expect([1,2,3,4].my_inject(10,:+)).to eq 20
 		end
 
 	end
