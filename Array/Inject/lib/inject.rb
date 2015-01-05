@@ -5,8 +5,8 @@ class Array
 	def my_inject(memo = self[0], sym = nil)
 		copy = self.dup																# copy = [1,2,3,4]
 		copy.shift if memo == self[0]									# copy = [2,3,4]
-		copy.each do |item|														# going through each of copy
-			memo = yield memo,item 											# my inject { |memo, item| 10 + each item of copy }
+		copy.each do |item|
+			memo = yield memo,item
 		end
 		memo
 	end
